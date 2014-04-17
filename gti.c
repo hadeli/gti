@@ -25,7 +25,7 @@
 #define GIT_NAME "git"
 
 #ifndef GTI_SPEED
-#define GTI_SPEED 50
+#define GTI_SPEED 10
 #endif
 
 int  term_width(void);
@@ -91,6 +91,7 @@ int term_width(void)
 void move_to_top(void)
 {
     fprintf(TERM_FH, "\033[7A");
+    fprintf(TERM_FH, "\033[31;1m");
 }
 
 void move_to_x(int x)
@@ -167,7 +168,7 @@ void draw_car(int x)
     line_at(x, "   ,---------------.");
     line_at(x, "  /  /``````|``````\\\\");
     line_at(x, " /  /_______|_______\\\\________");
-    line_at(x, "|]      GTI |'       |        |]");
+    line_at(x, "|]    CHUCK |'       |        |]");
     if (x % 2) {
     line_at(x, "=  .-:-.    |________|  .-:-.  =");
     line_at(x, " `  -+-  --------------  -+-  '");
@@ -189,5 +190,7 @@ void clear_car(int x)
     line_at(x, "  ");
     line_at(x, "  ");
     line_at(x, "  ");
+
+
 }
 
