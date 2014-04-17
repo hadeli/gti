@@ -25,7 +25,7 @@
 #define GIT_NAME "git"
 
 #ifndef GTI_SPEED
-#define GTI_SPEED 10
+#define GTI_SPEED 1
 #endif
 
 int  term_width(void);
